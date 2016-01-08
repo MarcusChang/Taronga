@@ -5,8 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Properties;
+import org.junit.BeforeClass;
 
 /**
  * Created by Marcus_Chang on 2016/Jan/07.
@@ -26,6 +28,10 @@ public class ProjectParams implements ApplicationContextAware {
 
     public static void setPropertiesFactoryBean(Properties propertiesFactoryBean) {
         ProjectParams.propertiesFactoryBean = propertiesFactoryBean;
+    }
+
+    public static Properties getPropertiesFactoryBean() {
+        return propertiesFactoryBean;
     }
 
     public static String getChromeDriverLocalPath() {

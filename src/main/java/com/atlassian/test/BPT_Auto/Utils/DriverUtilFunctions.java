@@ -1,6 +1,5 @@
 package com.atlassian.test.BPT_Auto.Utils;
 
-
 import com.atlassian.test.BPT_Auto.TestParams.ProjectParams;
 
 /**

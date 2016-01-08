@@ -2,6 +2,7 @@ package com.atlassian.test.BPT_Auto.Confluence;
 
 import java.io.IOException;
 
+import com.atlassian.test.BPT_Auto.TestParams.BaseTest;
 import com.atlassian.test.BPT_Auto.Utils.DriverUtilFunctions;
 import com.atlassian.test.BPT_Auto.Utils.LogUtilFunctions;
 import com.atlassian.test.BPT_Auto.Utils.RetryTest;
@@ -29,10 +30,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  * This java file is used for the auto ui test of the test case 167543 on the Matrix
  * It covers Chrome browser
  */
-public class TestCase_167543 {
+public class TestCase_167543 extends BaseTest {
 
     @Rule
     public RetryTest retry = new RetryTest(3);
+
 
     @Test
     /**
