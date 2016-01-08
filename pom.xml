@@ -11,7 +11,6 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>Taronga</name>
-    <url>http://maven.apache.org</url>
 
     <properties>
 
@@ -40,7 +39,7 @@
         <site.version>2.1</site.version>
 
         <!--surefire version, used for unit test trigger-->
-        <surefire.version>2.19.1</surefire.version>
+        <surefire.version>2.18.1</surefire.version>
 
         <!--plugin -->
         <!-- resources -->
@@ -83,6 +82,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -181,6 +181,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>${resourcesPlugin.version}</version>
@@ -188,69 +189,52 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
 
             <!--surefire plugin for BPT test-->
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.version}</version>
                 <executions>
                     <execution>
-                        <id>run-BPT-test</id>
-                        <!--<phase>integration-test</phase>-->
+                        <id>Atlassian-BPT-Test</id>
+                        <phase>test</phase>
                         <goals>
                             <goal>test</goal>
                         </goals>
                         <configuration>
                             <includes>
-                                <!--<include>**/ExampleForChrome.java</include>
-                                <include>**/ExampleForFirefox.java</include>
-                                <include>**/ExampleForIE.java</include>-->
-                                <include>**/TestCase_167543.java</include>
-                                <!-- <include>**/TestCase_167545_Firefox.java</include>
-                                 <include>**/TestCase_167545_IE.java</include>-->
+                                <!--<include>**/TestCase_167543.java</include>-->
+                                <!--<include>**/TestCase_167545.java</include>-->
+                                <include>**/TestCase_Tmp.java</include>
                             </includes>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
 
-        </plugins>
-    </build>
-
-    <reporting>
-        <plugins>
-            <!--used for Junit test report generation-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>${surefire-report.version}</version>
                 <configuration>
-                    <!--<reportSets>-->
-                    <!--<reportSet>-->
-                    <!--<reports>-->
-                    <!--<report>report-only</report>-->
-                    <!--</reports>-->
-                    <!--</reportSet>-->
-                    <!--</reportSets>-->
-                    <!--<reportsDirectory>${surefire-report.path}</reportsDirectory>-->
                     <!--<outputDirectory>${surefire-report.path}</outputDirectory>-->
                     <outputName>${surefire-report.name}</outputName>
                 </configuration>
             </plugin>
-        </plugins>
-    </reporting>
 
+        </plugins>
+    </build>
 
 </project>
