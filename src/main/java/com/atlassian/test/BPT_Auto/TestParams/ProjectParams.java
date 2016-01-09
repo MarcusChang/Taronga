@@ -46,6 +46,18 @@ public class ProjectParams implements ApplicationContextAware {
         return propertiesFactoryBean.get("IEDriverLocalPath").toString().trim();
     }
 
+    public static String getExtentReportsPath() {
+        return propertiesFactoryBean.get("ExtentReportsPath").toString().trim();
+    }
+
+    public static String getScreenShotsPath() {
+        return propertiesFactoryBean.get("ScreenShotsPath").toString().trim();
+    }
+
+    public static String getScreenShotsFormat() {
+        return propertiesFactoryBean.get("ScreenShotsFormat").toString().trim();
+    }
+
     public static String getLibraURL() {
         return propertiesFactoryBean.get("LibraURL").toString().trim();
     }

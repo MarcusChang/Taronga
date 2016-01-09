@@ -1,5 +1,7 @@
 package com.atlassian.test.BPT_Auto.Utils;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import org.openqa.selenium.*;
@@ -108,6 +110,15 @@ public class TestUtilFunctions {
         DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
         ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
         return ieCapabilities;
+    }
+
+    public static String getDateTime() {
+        Date date = Calendar.getInstance().getTime();
+
+        // Display a date in day, month, year format
+        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy_HH_mm_ss");
+        String today = formatter.format(date);
+        return today;
     }
 
 }
