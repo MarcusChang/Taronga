@@ -30,9 +30,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  */
 public class TestCase_167545 extends BaseTest {
 
-    @Rule
-    public RetryTest retry = new RetryTest(3);
-
     @Test
     /**
      *-> 话题外链校验测试_Chrome_Test() is used for test the homepage go top function

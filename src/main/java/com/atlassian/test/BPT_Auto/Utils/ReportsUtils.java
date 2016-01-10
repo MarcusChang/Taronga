@@ -25,6 +25,7 @@ public class ReportsUtils {
     public void endTestLogger(ExtentTest testlogger) {
         extent.endTest(testlogger);
         extent.flush();
+        extent.close();
     }
 
 }

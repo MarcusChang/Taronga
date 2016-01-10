@@ -32,10 +32,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  */
 public class TestCase_167543 extends BaseTest {
 
-    @Rule
-    public RetryTest retry = new RetryTest(3);
-
-
     @Test
     /**
      *-> 话题页_首页侧滑条调整测试_Chrome_HomePage_Test() is used for test the homepage go top function
