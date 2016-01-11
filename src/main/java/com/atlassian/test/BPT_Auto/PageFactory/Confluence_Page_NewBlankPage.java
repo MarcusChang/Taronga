@@ -10,17 +10,17 @@ import org.openqa.selenium.WebElement;
  */
 public class Confluence_Page_NewBlankPage extends CommonPageModel {
 
-    private static WebElement Ipt_ContentTitle;
-    private static WebElement Ipt_MceContentBody;
-    private static WebElement Btn_Priview;
-    private static WebElement Btn_Save;
-    private static WebElement Btn_Close;
-    private static String Txt_PageTitle;
+    public WebElement Ipt_ContentTitle;
+    public WebElement Ipt_MceContentBody;
+    public WebElement Btn_Priview;
+    public WebElement Btn_Save;
+    public WebElement Btn_Close;
+    public String Txt_PageTitle;
 
     public void getConfluencePageNewBlankPageElements(WebDriver driver) {
 
         Ipt_ContentTitle = getPageElementById(driver, By.id("content-title"));
-        Ipt_MceContentBody = getPageElementById(driver, By.id("tinymce"));
+        Ipt_MceContentBody = getPageElementByCssSelector(driver, By.cssSelector("body"));//mceContentBody
         Btn_Priview = getPageElementById(driver, By.id("rte-button-preview"));
         Btn_Save = getPageElementById(driver, By.id("rte-button-publish"));
         Btn_Close = getPageElementById(driver, By.id("rte-button-cancel"));

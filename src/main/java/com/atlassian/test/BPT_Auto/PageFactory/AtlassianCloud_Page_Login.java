@@ -10,11 +10,11 @@ import org.openqa.selenium.WebElement;
  */
 public class AtlassianCloud_Page_Login extends CommonPageModel {
 
-    private static WebElement Ipt_UserName;
-    private static WebElement Ipt_PassWord;
-    private static WebElement Btn_Login;
-    private static WebElement Ckb_KeepMeLoggedIn;
-    private static String Txt_PageTitle;
+    public WebElement Ipt_UserName;
+    public WebElement Ipt_PassWord;
+    public WebElement Btn_Login;
+    public WebElement Ckb_KeepMeLoggedIn;
+    public String Txt_PageTitle;
 
     public void getAtlassianCloudPageLoginElements(WebDriver driver) {
 
@@ -30,5 +30,7 @@ public class AtlassianCloud_Page_Login extends CommonPageModel {
         testUtil.clearInputs(driver, Ipt_UserName);
         testUtil.clearInputs(driver, Ipt_PassWord);
     }
+
+
 
 }

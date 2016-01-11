@@ -26,7 +26,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, byXpath, (long)5000);
+        testUtil.waitForElement(driver, byXpath, (long)800);
         if (testUtil.isElementPresent(driver, byXpath)) {
             WebElement pageElement = driver.findElement(byXpath);
             return pageElement;
@@ -49,7 +49,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, byId, (long)5000);
+        testUtil.waitForElement(driver, byId, (long)800);
         if (testUtil.isElementPresent(driver, byId)) {
             WebElement pageElement = driver.findElement(byId);
             return pageElement;
@@ -71,7 +71,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, byClassName, (long)5000);
+        testUtil.waitForElement(driver, byClassName, (long)800);
         if (testUtil.isElementPresent(driver, byClassName)) {
             WebElement pageElement = driver.findElement(byClassName);
             return pageElement;
@@ -94,7 +94,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, cssSelector, (long)5000);
+        testUtil.waitForElement(driver, cssSelector, (long)800);
         if (testUtil.isElementPresent(driver, cssSelector)) {
             WebElement pageElement = driver.findElement(cssSelector);
             return pageElement;
@@ -117,7 +117,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, tagName, (long)5000);
+        testUtil.waitForElement(driver, tagName, (long)800);
         if (testUtil.isElementPresent(driver, tagName)) {
             WebElement pageElement = driver.findElement(tagName);
             return pageElement;
@@ -140,7 +140,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, name, (long)5000);
+        testUtil.waitForElement(driver, name, (long)800);
         if (testUtil.isElementPresent(driver, name)) {
             WebElement pageElement = driver.findElement(name);
             return pageElement;
@@ -163,7 +163,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, partialLinkText, (long)5000);
+        testUtil.waitForElement(driver, partialLinkText, (long)800);
         if (testUtil.isElementPresent(driver, partialLinkText)) {
             WebElement pageElement = driver.findElement(partialLinkText);
             return pageElement;
@@ -186,7 +186,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, linkText, (long)5000);
+        testUtil.waitForElement(driver, linkText, (long)800);
         if (testUtil.isElementPresent(driver, linkText)) {
             WebElement pageElement = driver.findElement(linkText);
             return pageElement;

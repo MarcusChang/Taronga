@@ -58,141 +58,56 @@ public class ProjectParams implements ApplicationContextAware {
         return propertiesFactoryBean.get("ScreenShotsFormat").toString().trim();
     }
 
-    public static String getLibraURL() {
-        return propertiesFactoryBean.get("LibraURL").toString().trim();
+    public static String getConfluenceURL() {
+        return propertiesFactoryBean.get("ConfluenceURL").toString().trim();
     }
 
-    public static String getStandardTopicURL() {
-        return propertiesFactoryBean.get("StandardTopicURL").toString().trim();
+    public static String getLoginUserName() {
+        return propertiesFactoryBean.get("LoginUserName").toString().trim();
     }
 
-    public static String getPKTopicURL() {
-        return propertiesFactoryBean.get("PKTopicURL").toString().trim();
+    public static String getLoginUserPass() {
+        return propertiesFactoryBean.get("LoginUserPass").toString().trim();
     }
 
-    public static String getChromeTest_167543_HomePage_LayOut() {
-        return propertiesFactoryBean.get("ChromeTest_167543_HomePage_LayOut").toString().trim();
+    public static String getTestCase_CreateNewPage_On_Chrome_LayOut() {
+        return propertiesFactoryBean.get("TestCase_CreateNewPage_QuickCreate_On_Chrome_LayOut").toString().trim();
     }
 
-    public static String getChromeTest_167543_StdTopic_LayOut() {
-        return propertiesFactoryBean.get("ChromeTest_167543_StdTopic_LayOut").toString().trim();
+    public static String getTestCase_CreateNewPage_QuickCreate_On_Firefox_LayOut() {
+        return propertiesFactoryBean.get("TestCase_CreateNewPage_QuickCreate_On_Firefox_LayOut").toString().trim();
     }
 
-    public static String getChromeTest_167543_PKTopic_LayOut() {
-        return propertiesFactoryBean.get("ChromeTest_167543_PKTopic_LayOut").toString().trim();
+    public static String getTestCase_CreateNewPage_QuickCreate_On_IE_LayOut() {
+        return propertiesFactoryBean.get("TestCase_CreateNewPage_QuickCreate_On_IE_LayOut").toString().trim();
     }
 
-    public static String getFirefoxTest_167543_HomePage_LayOut() {
-        return propertiesFactoryBean.get("FirefoxTest_167543_HomePage_LayOut").toString().trim();
+    public static String getChromeQuickCreateNewBlankPageTitle() {
+        return propertiesFactoryBean.get("ChromeQuickCreateNewBlankPageTitle").toString().trim();
     }
 
-    public static String getFirefoxTest_167543_StdTopic_LayOut() {
-        return propertiesFactoryBean.get("FirefoxTest_167543_StdTopic_LayOut").toString().trim();
+    public static String getChromeQuickCreateNewBlankPageBodyContent() {
+        return propertiesFactoryBean.get("ChromeQuickCreateNewBlankPageBodyContent").toString().trim();
     }
 
-    public static String getFirefoxTest_167543_PKTopic_LayOut() {
-        return propertiesFactoryBean.get("FirefoxTest_167543_PKTopic_LayOut").toString().trim();
+    public static String getFirefoxQuickCreateNewBlankPageTitle() {
+        return propertiesFactoryBean.get("FirefoxQuickCreateNewBlankPageTitle").toString().trim();
     }
 
-    public static String getIETest_167543_HomePage_LayOut() {
-        return propertiesFactoryBean.get("IETest_167543_HomePage_LayOut").toString().trim();
+    public static String getFirefoxQuickCreateNewBlankPageBodyContent() {
+        return propertiesFactoryBean.get("FirefoxQuickCreateNewBlankPageBodyContent").toString().trim();
     }
 
-    public static String getIETest_167543_StdTopic_LayOut() {
-        return propertiesFactoryBean.get("IETest_167543_StdTopic_LayOut").toString().trim();
+    public static String getIEQuickCreateNewBlankPageTitle() {
+        return propertiesFactoryBean.get("IEQuickCreateNewBlankPageTitle").toString().trim();
     }
 
-    public static String getIETest_167543_PKTopic_LayOut() {
-        return propertiesFactoryBean.get("IETest_167543_PKTopic_LayOut").toString().trim();
+    public static String getIEQuickCreateNewBlankPageBodyContent() {
+        return propertiesFactoryBean.get("IEQuickCreateNewBlankPageBodyContent").toString().trim();
     }
 
-    public static String getChromeTest_167545_LayOut() {
-        return propertiesFactoryBean.get("ChromeTest_167545_LayOut").toString().trim();
-    }
 
-    public static String getFirefoxTest_167545_LayOut() {
-        return propertiesFactoryBean.get("FirefoxTest_167545_LayOut").toString().trim();
-    }
 
-    public static String getIETest_167545_LayOut() {
-        return propertiesFactoryBean.get("IETest_167545_LayOut").toString().trim();
-    }
-
-    public static String getSimLoginUserName_1() {
-        return propertiesFactoryBean.get("SimLoginUserName_1").toString().trim();
-    }
-
-    public static String getSimLoginUserName_2() {
-        return propertiesFactoryBean.get("SimLoginUserName_2").toString().trim();
-    }
-
-    public static String getSimLoginUserName_3() {
-        return propertiesFactoryBean.get("SimLoginUserName_3").toString().trim();
-    }
-
-    public static String getSimLoginUserPass() {
-        return propertiesFactoryBean.get("SimLoginUserPass").toString().trim();
-    }
-
-    public static String getTargetSkuUrl_1() {
-        return propertiesFactoryBean.get("TargetSkuUrl_1").toString().trim();
-    }
-
-    public static String getTargetSkuUrl_2() {
-        return propertiesFactoryBean.get("TargetSkuUrl_2").toString().trim();
-    }
-
-    public static String getTargetSkuUrl_3() {
-        return propertiesFactoryBean.get("TargetSkuUrl_3").toString().trim();
-    }
-
-    public static String getTargetSkuUrl_4() {
-        return propertiesFactoryBean.get("TargetSkuUrl_4").toString().trim();
-    }
-
-    public static String getTargetSkuUrl_5() {
-        return propertiesFactoryBean.get("TargetSkuUrl_5").toString().trim();
-    }
-
-    public static String getTargetSkuUrl_6() {
-        return propertiesFactoryBean.get("TargetSkuUrl_6").toString().trim();
-    }
-
-    public static String getTargetSkuUrl_7() {
-        return propertiesFactoryBean.get("TargetSkuUrl_7").toString().trim();
-    }
-
-    public static String getTargetDialogAskInput_1() {
-        return propertiesFactoryBean.get("TargetDialogAskInput_1").toString().trim();
-    }
-
-    public static String getTargetDialogAskInput_2() {
-        return propertiesFactoryBean.get("TargetDialogAskInput_2").toString().trim();
-    }
-
-    public static String getTargetDialogAskInput_3() {
-        return propertiesFactoryBean.get("TargetDialogAskInput_3").toString().trim();
-    }
-
-    public static String getTargetDialogAskInput_4() {
-        return propertiesFactoryBean.get("TargetDialogAskInput_4").toString().trim();
-    }
-
-    public static String getTargetDialogAskInput_5() {
-        return propertiesFactoryBean.get("TargetDialogAskInput_5").toString().trim();
-    }
-
-    public static String getTargetDialogAskInput_6() {
-        return propertiesFactoryBean.get("TargetDialogAskInput_6").toString().trim();
-    }
-
-    public static String getTargetDialogAskInput_7() {
-        return propertiesFactoryBean.get("TargetDialogAskInput_7").toString().trim();
-    }
-
-    public static String getCreateTopicReturns_1() {
-        return propertiesFactoryBean.get("CreateTopicReturns_1").toString().trim();
-    }
 
 
 }
