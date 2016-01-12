@@ -56,7 +56,6 @@
         <!--surefire report file name-->
         <surefire-report.name>TestReport-BPT-${maven.build.timestamp}</surefire-report.name>
 
-        <project.reporting.outputDirectory>${surefire-report.path}</project.reporting.outputDirectory>
 
     </properties>
 
@@ -223,15 +222,18 @@
                 <executions>
                     <execution>
                         <id>Atlassian-BPT-Test</id>
-                        <phase>test</phase>
+                        <!--<phase>test</phase>-->
                         <goals>
                             <goal>test</goal>
                         </goals>
                         <configuration>
                             <includes>
-                                <!--<include>**/TestCase_167543.java</include>-->
-                                <!--<include>**/TestCase_167545.java</include>-->
-                                <include>**/TestCase_Tmp.java</include>
+                                <include>**/TestCase_CreateNewPage_QuickCreate_On_Chrome.java</include>
+                                <include>**/TestCase_CreateNewPage_QuickCreate_On_Firefox.java</include>
+                                <include>**/TestCase_CreateNewPage_QuickCreate_On_IE.java</include>
+                                <include>**/TestCase_SetRestrictions_QuickCreate_On_Chrome.java</include>
+                                <include>**/TestCase_SetRestrictions_QuickCreate_On_Firefox.java</include>
+                                <include>**/TestCase_SetRestrictions_QuickCreate_On_IE.java</include>
                             </includes>
                         </configuration>
                     </execution>
