@@ -45,7 +45,9 @@ the param's value will changed and we don't need to compile the whole solution a
 
 Below is my test environment:
 1. Selenium Drivers : http://www.seleniumhq.org/download/
-My Drivers -> [IEDriverServer_Win32_2.48.0], [chromedriver_win32_2.20], [firefox_43.0.1]
+My Drivers -> [IEDriverServer_Win32_2.48.0], [chromedriver_win32_2.20], [firefox_43.0.1].
+If you use the IE11 for the test, there is a defect after the WebDriver boot the browser,
+Please Check the web for details : http://www.michael-whelan.net/selenium-webdriver-and-ie11/
 
 2. My Maven conf settings.xml -> D:\Maven\apache-maven-3.3.3\conf\settings.xml
 <mirrors>
