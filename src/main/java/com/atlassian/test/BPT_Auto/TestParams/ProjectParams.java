@@ -70,7 +70,7 @@ public class ProjectParams implements ApplicationContextAware {
         return propertiesFactoryBean.get("LoginUserPass").toString().trim();
     }
 
-    public static String getTestCase_CreateNewPage_On_Chrome_LayOut() {
+    public static String getTestCase_CreateNewPage_QuickCreate_On_Chrome_LayOut() {
         return propertiesFactoryBean.get("TestCase_CreateNewPage_QuickCreate_On_Chrome_LayOut").toString().trim();
     }
 

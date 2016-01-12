@@ -4,11 +4,18 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import com.atlassian.test.BPT_Auto.TestParams.ProjectParams;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.server.FirefoxDriverProvider;
 
 
 /**
@@ -105,11 +112,30 @@ public class TestUtilFunctions {
     /**
      * ->set IE driver properties
      */
-    public DesiredCapabilities setIEdriverProperties(String IEdriverLocalPath){
-        System.setProperty("webdriver.ie.driver", IEdriverLocalPath);
+    public DesiredCapabilities setIEDriverProperties(){
         DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
-        ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+        ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+        ieCapabilities.setCapability(InternetExplorerDriver.UNEXPECTED_ALERT_BEHAVIOR, true);
+        ieCapabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
         return ieCapabilities;
+    }
+
+    /**
+     * ->set Firefox driver properties
+     */
+    public DesiredCapabilities setFirefoxDriverProperties(){
+        DesiredCapabilities firefoxCapabilities = DesiredCapabilities.firefox();
+        firefoxCapabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,true);
+        return firefoxCapabilities;
+    }
+
+    /**
+     * ->set Chrome driver properties
+     */
+    public DesiredCapabilities setChromeDriverProperties(){
+        DesiredCapabilities chromeCapabilities = DesiredCapabilities.chrome();
+        chromeCapabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,true);
+        return chromeCapabilities;
     }
 
     public static String getDateTime() {
