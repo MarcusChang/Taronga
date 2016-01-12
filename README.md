@@ -71,3 +71,5 @@ My Drivers -> [IEDriverServer_Win32_2.48.0], [chromedriver_win32_2.20], [firefox
 4. My confluence free tail site is : https://confluence-test-of-marcus.atlassian.net
 Username & Password can be found at [resources.conf:testParams.properties]
 It only last for 7 days.
+
+5. I use the IntelliJ IDEA 15.0.2 for all development.
