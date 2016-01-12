@@ -13,6 +13,7 @@ public class Confluence_Page_NewCreatedPage extends CommonPageModel {
     public WebElement Txt_CreatedPageTitleText;
     public WebElement Txt_CreatedPageMainContent;
     public WebElement Btn_CreatedPageUserMenuLink;
+    public WebElement Lnk_Edit;
     public WebElement Btn_Logout;
     public String Txt_PageTitle;
 
@@ -21,6 +22,7 @@ public class Confluence_Page_NewCreatedPage extends CommonPageModel {
         Txt_CreatedPageTitleText = getPageElementById(driver, By.id("title-text"));
         Txt_CreatedPageMainContent = getPageElementById(driver, By.id("main-content"));
         Btn_CreatedPageUserMenuLink = getPageElementById(driver, By.id("user-menu-link"));
+        Lnk_Edit = getPageElementById(driver, By.id("editPageLink"));
         Btn_Logout = getPageElementById(driver, By.id("logout-link"));
         Txt_PageTitle = driver.getTitle();
 

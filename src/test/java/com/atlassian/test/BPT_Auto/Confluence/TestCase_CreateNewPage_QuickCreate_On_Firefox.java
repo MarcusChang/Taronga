@@ -99,7 +99,7 @@ public class TestCase_CreateNewPage_QuickCreate_On_Firefox extends BaseTest {
         //Action 4 : Input title and body contents on the new blank page and press save button to create the page
         logger.log(LogStatus.INFO, "Begin to input contents on New Blank Page Title and Body.");
         ConfluencePageNewBlankPage.Ipt_ContentTitle.sendKeys(ProjectParams.getFirefoxQuickCreateNewBlankPageTitle());
-        ConfluencePageNewBlankPage.setConfluencePageNewBlankPageMCEbody(firefoxDriver);
+        ConfluencePageNewBlankPage.setTestCaseCreateNewPageConfluencePageNewBlankPageMCEbody(firefoxDriver);
         ConfluencePageNewBlankPage.Btn_Save.click();
 
         //Grab all target web elements on the page : Confluence_Page_NewCreatedPage

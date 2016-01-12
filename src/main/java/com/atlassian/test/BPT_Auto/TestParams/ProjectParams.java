@@ -70,6 +70,15 @@ public class ProjectParams implements ApplicationContextAware {
         return propertiesFactoryBean.get("LoginUserPass").toString().trim();
     }
 
+    public static String getLoginInvitedUserName() {
+        return propertiesFactoryBean.get("LoginInvitedUserName").toString().trim();
+    }
+
+    public static String getLoginInvitedUserPass() {
+        return propertiesFactoryBean.get("LoginInvitedUserPass").toString().trim();
+    }
+
+
     public static String getTestCase_CreateNewPage_QuickCreate_On_Chrome_LayOut() {
         return propertiesFactoryBean.get("TestCase_CreateNewPage_QuickCreate_On_Chrome_LayOut").toString().trim();
     }
@@ -105,6 +114,48 @@ public class ProjectParams implements ApplicationContextAware {
     public static String getIEQuickCreateNewBlankPageBodyContent() {
         return propertiesFactoryBean.get("IEQuickCreateNewBlankPageBodyContent").toString().trim();
     }
+
+    public static String getTestCase_SetRestrictions_QuickCreate_On_Chrome_LayOut() {
+        return propertiesFactoryBean.get("TestCase_SetRestrictions_QuickCreate_On_Chrome_LayOut").toString().trim();
+    }
+
+    public static String getTestCase_SetRestrictions_QuickCreate_On_Firefox_LayOut() {
+        return propertiesFactoryBean.get("TestCase_SetRestrictions_QuickCreate_On_Firefox_LayOut").toString().trim();
+    }
+
+    public static String getTestCase_SetRestrictions_QuickCreate_On_IE_LayOut() {
+        return propertiesFactoryBean.get("TestCase_SetRestrictions_QuickCreate_On_IE_LayOut").toString().trim();
+    }
+
+    public static String getChromeSetRestrictionsNewBlankPageTitle() {
+        return propertiesFactoryBean.get("ChromeSetRestrictionsOnQuickCreateNewBlankPageTitle").toString().trim();
+    }
+
+    public static String getChromeSetRestricitonsNewBlankPageBodyContent() {
+        return propertiesFactoryBean.get("ChromeSetRestrictionsOnQuickCreateNewBlankPageBodyContent").toString().trim();
+    }
+
+    public static String getFirefoxSetRestrictionsNewBlankPageTitle() {
+        return propertiesFactoryBean.get("FirefoxSetRestrictionsOnQuickCreateNewBlankPageTitle").toString().trim();
+    }
+
+    public static String getFirefoxSetRestrictionsNewBlankPageBodyContent() {
+        return propertiesFactoryBean.get("FirefoxSetRestrictionsOnQuickCreateNewBlankPageBodyContent").toString().trim();
+    }
+
+    public static String getIESetRestrictionsNewBlankPageTitle() {
+        return propertiesFactoryBean.get("IESetRestrictionsOnQuickCreateNewBlankPageTitle").toString().trim();
+    }
+
+    public static String getIESetRestrictionsNewBlankPageBodyContent() {
+        return propertiesFactoryBean.get("IESetRestrictionsOnQuickCreateNewBlankPageBodyContent").toString().trim();
+    }
+
+    public static String getRestrictionsPageSetPermissionSelectorToCanView() {
+        return propertiesFactoryBean.get("RestrictionsPageSetPermissionSelectorToCanView").toString().trim();
+    }
+
+
 
 
 

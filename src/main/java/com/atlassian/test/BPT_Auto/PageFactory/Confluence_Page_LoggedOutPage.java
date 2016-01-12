@@ -11,10 +11,12 @@ import org.openqa.selenium.WebElement;
 public class Confluence_Page_LoggedOutPage extends CommonPageModel {
 
     public WebElement Pop_AlreadyLoggedOut;
+    public WebElement Btn_ReturnToLoginPage;
 
     public void getConfluencePageLoggedOutPageElements(WebDriver driver) {
 
         Pop_AlreadyLoggedOut = getPageElementById(driver, By.id("logged-out"));
+        Btn_ReturnToLoginPage = getPageElementByXpath(driver, By.xpath("//form[@id='form-acknowledge']/div/div/button"));
 
     }
 }
