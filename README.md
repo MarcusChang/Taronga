@@ -23,14 +23,14 @@ It will take a screenshot when one JUnit test fails for retry times.(It only tak
 This screenshot function has been wrapped into the [Utils.RetryTest]
 
 -> We have the test report : [Utils.ReportsUtils]
-This is a decent test report generator, for more info, you can find on : http://extentreports.relevantcodes.com/
+This is a decent test report generator, for more info, you can find on : http://extentreports.relevantcodes.com/,
 The local generate path is : [resources.conf.testParams.properties.ExtentReportsPath] you can change it by yourself.
 
--> We have system level info logs : [Utils.LogUtilFunctions], [Utils.Log4jFileAppender], [resources.conf.log4j.properties]
-All logs will be stored at : Taronga\WebDriverLogs
+-> We have system level info logs : [Utils.LogUtilFunctions], [Utils.Log4jFileAppender], [resources.conf.log4j.properties].
+All logs will be stored at : Taronga\WebDriverLogs,
 You can change them by edit the [resources.testParams.properties.TestCase_CreateNewPage_QuickCreate_On_Chrome_LayOut]
 
--> We have the Spring IOC : [TestParams.BaseTest], [TestParams.ProjectParams], [resources.conf.testParams.properties], [resources.spring]
+-> We have the Spring IOC : [TestParams.BaseTest], [TestParams.ProjectParams], [resources.conf.testParams.properties], [resources.spring].
 Why we use the spring to control the test params ? Because of the elastic design.
 If the scaffold will be implemented as an online test application in the future,
 then, when we want to change any param to fit the test,
@@ -40,6 +40,9 @@ the param's value will changed and we don't need to compile the whole solution a
 -> We have the PageFactory : loosely-coupled design
 
 -> We also have the Jenkins-CI, which means we could use the Jenkins to trigger the test on the distributed clients.
+
+-> One last thing : You'll not find any [try...catch] block in the test case java file.
+Because the [try...catch] already wrapped into the [Utils.RetryTest].
 
 *****************************************************************************************************************************************
 
