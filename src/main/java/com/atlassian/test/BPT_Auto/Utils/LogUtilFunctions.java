@@ -15,7 +15,7 @@ public class LogUtilFunctions {
 
     public void setLoggerProperties(String testCaseClassName, String layOutPath, String driverLocalPath){
 
-        //当前目录的上级目录路径
+        //Obtain the upper level folder path
         String parentPath = System.getProperty("user.dir");
 
         Logger logger = Logger.getLogger(testCaseClassName + ".class");
@@ -45,7 +45,6 @@ public class LogUtilFunctions {
         } catch (Exception e) {
             logger.fatal("the FileAppender cannot be initialized, please check the output path!");
         }
-
 
         logger.addAppender(Test_Case_appender);
         logger.info("-----> Begin to set the driver properties : driver path = " + driverLocalPath + " <-----");

@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 
 
 /**
- * Created by Marcus_Chang on 2016/1/9.
+ * Created by Marcus_Chang on 2016/Jan/9.
  */
 public class ScreenShotTaker {
 

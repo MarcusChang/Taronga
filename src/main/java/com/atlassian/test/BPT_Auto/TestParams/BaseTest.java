@@ -15,10 +15,10 @@ public class BaseTest {
     public static void setUp() throws Exception {
         try {
             long start = System.currentTimeMillis();
-            System.out.println("正在加载配置文件...");
+            System.out.println("Loading the Config files...");
 
-            appContext = new ClassPathXmlApplicationContext("spring/spring-config.xml");//初始化spring 容器});
-            System.out.println("配置文件加载完毕,耗时：" + (System.currentTimeMillis() - start));
+            appContext = new ClassPathXmlApplicationContext("spring/spring-config.xml");//Init the spring containers
+            System.out.println("Config File loaded finished, Cost：" + (System.currentTimeMillis() - start));
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 /**
  * Created by Marcus_Chang on 2016/Jan/07.
+ * Latest Updated by Marcus_Chang on 2016/Jan/10.
  */
 public class RetryTest implements TestRule{
 

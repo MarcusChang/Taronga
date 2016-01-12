@@ -9,7 +9,7 @@
        default-autowire="byName">
 
 
-        <!-- 可以使用如下的方式声明Properties类型的FactoryBean来加载配置文件，这种方式就只能当做Properties属性注入，而不能获其中具体的值 -->
+        <!-- Use below format to declare the (Properties)FactoryBean for loading the configuration files. Only use it as the Properties injection, can't obtain the value -->
         <bean id="propertiesFactoryBean"
           class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="locations">
@@ -19,6 +19,6 @@
         </property>
     </bean>
 
-    <!--获取Properties属性值-->
+    <!--Obtain the Properties value-->
     <bean id="projectParams" class="com.atlassian.test.BPT_Auto.TestParams.ProjectParams"/>
 </beans>

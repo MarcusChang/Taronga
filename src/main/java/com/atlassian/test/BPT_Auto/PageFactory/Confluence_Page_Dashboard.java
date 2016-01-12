@@ -48,12 +48,10 @@ public class Confluence_Page_Dashboard extends CommonPageModel {
     }
 
     public void switchToIframe(WebDriver driver, WebElement targetIframe) {
-        //使driver进入Frame_FormLogin内联框架进行元素定位
         driver.switchTo().frame(targetIframe);
     }
 
     public void switchOutIframe(WebDriver driver) {
-        //登录完成后使driver跳出Frame_FormLogin内联框架
         driver.switchTo().defaultContent();
     }
 

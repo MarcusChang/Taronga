@@ -10,15 +10,15 @@ public class DriverUtilFunctions {
     public DriverUtilFunctions(String driver){
 
         if (driver != null && driver.equals("Chrome")){
-            // 设置 chrome 的路径
+            // set the local Chrome driver path
             System.setProperty("webdriver.chrome.driver", ProjectParams.getChromeDriverLocalPath());
         }
         else if (driver != null && driver.equals("Firefox")){
-            // 设置 Firefox 的路径
+            // set the local Firefox driver path
             System.setProperty("webdriver.firefox.bin", ProjectParams.getFireFoxDriverLocalPath());
         }
         else if (driver != null && driver.equals("IE")){
-            // 设置 IE 的路径
+            // set the local IE driver path
             System.setProperty("webdriver.ie.driver", ProjectParams.getIEDriverLocalPath());
         }
 

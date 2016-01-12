@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
  * Created by Marcus_Chang on 2016/1/11.
+ *Latest Updated by Marcus_Chang on 2016/Jan/13.
  */
 public class TestCase_SetRestrictions_QuickCreate_On_Chrome extends BaseTest {
 
@@ -37,19 +38,19 @@ public class TestCase_SetRestrictions_QuickCreate_On_Chrome extends BaseTest {
     public static void init() {
         //create the testUtilFunctions instance
         testUtil = new TestUtilFunctions();
-        //初始化DriverUtilFunctions类，在其构造函数中设置driver启动路径
+        //initial DriverUtilFunctions.class，set the driver boot path in its constructor
         new DriverUtilFunctions("Chrome");
         DesiredCapabilities chromeCapabilities = testUtil.setChromeDriverProperties();
 
         //创建一个 Chrome 的浏览器实例
         chromeDriver = new ChromeDriver(chromeCapabilities);
-        //Create the ReportsUtils instance
+        //create a Chrome browser instance
         report = new ReportsUtils();
         //Create the ScreenShotTaker instance
         capture = new ScreenShotTaker();
         //Begin to log the report details
         logger = report.testLogger("TestCase_SetRestrictions_QuickCreate_On_Chrome");
-        //初始化LogUtilFunctions类，创建此类实例并设置当前测试用例的日志配置
+        //initial LogUtilFunctions.class，set the system level info log configuration by create the class instance
         LogUtilFunctions logUtil = new LogUtilFunctions();
         logUtil.setLoggerProperties("TestCase_SetRestrictions_QuickCreate_On_Chrome", ProjectParams.getTestCase_SetRestrictions_QuickCreate_On_Chrome_LayOut(), ProjectParams.getChromeDriverLocalPath());
 
@@ -61,7 +62,7 @@ public class TestCase_SetRestrictions_QuickCreate_On_Chrome extends BaseTest {
         ConfluencePageLoggedOutPage = new Confluence_Page_LoggedOutPage();
         ConfluencePageRestrictions = new Confluence_Page_Restrictions();
 
-        //最大化浏览器窗口
+        //Maximize the browser window
         AtlassianCloudPageLogin.MaxPageWindow(chromeDriver);
     }
 

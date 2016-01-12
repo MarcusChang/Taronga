@@ -6,7 +6,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
 /**
- * Created by Marcus_Chang on 2016/1/10.
+ * Created by Marcus_Chang on 2016/Jan/10.
  */
 public class ReportsUtils {
 
