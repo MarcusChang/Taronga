@@ -37,6 +37,7 @@ You can change them by edit the [resources.testParams.properties.TestCase_Create
 
 
 - We have the Spring IOC : [TestParams.BaseTest], [TestParams.ProjectParams], [resources.conf.testParams.properties], [resources.spring].
+
 Why we use the spring to control the test params ? Because of the elastic design.
 If the scaffold will be implemented as an online test application in the future,
 then, when we want to change any param to fit the test,
