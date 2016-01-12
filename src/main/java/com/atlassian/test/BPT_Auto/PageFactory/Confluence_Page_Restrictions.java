@@ -29,7 +29,8 @@ public class Confluence_Page_Restrictions extends CommonPageModel{
         Btn_NoRestrictions = getPageElementByXpath(driver, By.xpath("//div[@id='select2-drop']/ul/li[1]/div"));
         Btn_EditingRestricted = getPageElementByXpath(driver, By.xpath("//div[@id='select2-drop']/ul/li[2]/div"));
         Btn_ViewingAndEditingRestricted = getPageElementByXpath(driver, By.xpath("//div[@id='select2-drop']/ul/li[3]/div"));
-        Ipt_AddUserBar = getPageElementById(driver, By.id("s2id_restrictions-dialog-auto-picker"));
+        //Ipt_AddUserBar = getPageElementById(driver, By.id("s2id_restrictions-dialog-auto-picker"));
+        Ipt_AddUserBar = getPageElementById(driver, By.id("s2id_autogen2"));
         Drp_PermissionSelector = getPageElementById(driver, By.id("page-restrictions-permission-selector"));
         Btn_Add = getPageElementById(driver, By.id("page-restrictions-add-button"));
         Btn_Apply = getPageElementById(driver, By.id("page-restrictions-dialog-save-button"));

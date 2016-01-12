@@ -111,15 +111,20 @@ public class TestCase_SetRestrictions_QuickCreate_On_Chrome extends BaseTest {
         //Begin to perform the Restrictions setting actions
         logger.log(LogStatus.INFO, "Performing the Restrictions setting actions.");
         ConfluencePageRestrictions.Drp_RestrictionsList.click();
+        ConfluencePageRestrictions.getConfluencePageRestrictionsElements(chromeDriver);
         ConfluencePageRestrictions.Btn_ViewingAndEditingRestricted.click();
         ConfluencePageRestrictions.Ipt_AddUserBar.sendKeys(ProjectParams.getLoginInvitedUserName());
+        testUtil.waitForTime(1000);
+        ConfluencePageRestrictions.getConfluencePageRestrictionsElements(chromeDriver);
         ConfluencePageRestrictions.Drp_InvitedUser.click();
         ConfluencePageRestrictions.setPermissionSelectorToValue(ProjectParams.getRestrictionsPageSetPermissionSelectorToCanView());
         ConfluencePageRestrictions.Btn_Add.click();
+        testUtil.waitForTime(1000);
         ConfluencePageRestrictions.Btn_Apply.click();
+        testUtil.waitForTime(1000);
         logger.log(LogStatus.PASS, "The Invited User's Restrictions is set to [Viewing and editing restricted]-[Can View].");
         ConfluencePageNewBlankPage.Btn_Save.click();
-
+        testUtil.waitForTime(1000);
         //Grab all target web elements on the page : Confluence_Page_NewCreatedPage
         ConfluencePageNewCreatedPage.getConfluencePageNewCreatedPageElements(chromeDriver);
         //Assert the page title == [TestCase_SetRestrictions_QuickCreate_On_Chrome Test Title :) - Confluence-AutoTest-Marcus - Confluence]
@@ -142,6 +147,7 @@ public class TestCase_SetRestrictions_QuickCreate_On_Chrome extends BaseTest {
 
         //Action 6 : Use the Invited User to login the Confluence
         logger.log(LogStatus.INFO, "Begin to use the Invited User to login the Confluence page.");
+        AtlassianCloudPageLogin.getAtlassianCloudPageLoginElements(chromeDriver);
         AtlassianCloudPageLogin.cleanLoginPageInputTextArea(chromeDriver, testUtil);
         AtlassianCloudPageLogin.Ipt_UserName.sendKeys(ProjectParams.getLoginInvitedUserName());
         AtlassianCloudPageLogin.Ipt_PassWord.sendKeys(ProjectParams.getLoginInvitedUserPass());
@@ -155,8 +161,6 @@ public class TestCase_SetRestrictions_QuickCreate_On_Chrome extends BaseTest {
         ConfluencePageNewCreatedPage.getConfluencePageNewCreatedPageElements(chromeDriver);
         Assert.assertNull(ConfluencePageNewCreatedPage.Lnk_Edit);
         logger.log(LogStatus.PASS, "Restriction for the Invited User verified Success !");
-
-
 
     }
 
