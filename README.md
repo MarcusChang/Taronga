@@ -78,3 +78,9 @@ Username & Password can be found at [resources.conf:testParams.properties]
 It only last for 7 days.
 
 5. I use the IntelliJ IDEA 15.0.2 for all development.
+
+6. My local report generate path is : C:\Users\Marcus_Chang\Desktop\TarongaTestReport,
+you can change it on [resource.conf:testParams.properties].
+
+7. My local screenshot generate path is : C:\Users\Marcus_Chang\Desktop\Atlassion-BPTAuto-Screenshots,
+you can change it on [resource.conf:testParams.properties].
