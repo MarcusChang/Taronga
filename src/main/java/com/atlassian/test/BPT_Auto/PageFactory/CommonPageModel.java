@@ -1,5 +1,6 @@
 package com.atlassian.test.BPT_Auto.PageFactory;
 
+import com.atlassian.test.BPT_Auto.TestParams.ProjectParams;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,8 @@ import com.atlassian.test.BPT_Auto.Utils.TestUtilFunctions;
  * This file is a abstract page object factory which stores all elements and methods on a common page.
  */
 public class CommonPageModel {
+
+    private static long waitTime = Long.parseLong(ProjectParams.getWaitElementTime());
 
     TestUtilFunctions testUtil = new TestUtilFunctions();
 
@@ -26,7 +29,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, byXpath, (long)800);
+        testUtil.waitForElement(driver, byXpath, waitTime);
         if (testUtil.isElementPresent(driver, byXpath)) {
             WebElement pageElement = driver.findElement(byXpath);
             return pageElement;
@@ -49,7 +52,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, byId, (long)800);
+        testUtil.waitForElement(driver, byId, waitTime);
         if (testUtil.isElementPresent(driver, byId)) {
             WebElement pageElement = driver.findElement(byId);
             return pageElement;
@@ -71,7 +74,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, byClassName, (long)800);
+        testUtil.waitForElement(driver, byClassName, waitTime);
         if (testUtil.isElementPresent(driver, byClassName)) {
             WebElement pageElement = driver.findElement(byClassName);
             return pageElement;
@@ -94,7 +97,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, cssSelector, (long)800);
+        testUtil.waitForElement(driver, cssSelector, waitTime);
         if (testUtil.isElementPresent(driver, cssSelector)) {
             WebElement pageElement = driver.findElement(cssSelector);
             return pageElement;
@@ -117,7 +120,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, tagName, (long)800);
+        testUtil.waitForElement(driver, tagName, waitTime);
         if (testUtil.isElementPresent(driver, tagName)) {
             WebElement pageElement = driver.findElement(tagName);
             return pageElement;
@@ -140,7 +143,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, name, (long)800);
+        testUtil.waitForElement(driver, name, waitTime);
         if (testUtil.isElementPresent(driver, name)) {
             WebElement pageElement = driver.findElement(name);
             return pageElement;
@@ -163,7 +166,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, partialLinkText, (long)800);
+        testUtil.waitForElement(driver, partialLinkText, waitTime);
         if (testUtil.isElementPresent(driver, partialLinkText)) {
             WebElement pageElement = driver.findElement(partialLinkText);
             return pageElement;
@@ -186,7 +189,7 @@ public class CommonPageModel {
             return null;
         }
 
-        testUtil.waitForElement(driver, linkText, (long)800);
+        testUtil.waitForElement(driver, linkText, waitTime);
         if (testUtil.isElementPresent(driver, linkText)) {
             WebElement pageElement = driver.findElement(linkText);
             return pageElement;

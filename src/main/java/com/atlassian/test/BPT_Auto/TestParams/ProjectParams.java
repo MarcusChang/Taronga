@@ -155,6 +155,10 @@ public class ProjectParams implements ApplicationContextAware {
         return propertiesFactoryBean.get("RestrictionsPageSetPermissionSelectorToCanView").toString().trim();
     }
 
+    public static String getWaitElementTime() {
+        return propertiesFactoryBean.get("WaitElementTime").toString().trim();
+    }
+
 
 
 
