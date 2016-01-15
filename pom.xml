@@ -27,6 +27,9 @@
         <!-- mysql -->
         <mysql.connector.version>5.1.38</mysql.connector.version>
 
+        <!--Apache POI excel libraries-->
+        <apache.poi.version>3.13</apache.poi.version>
+
         <!--scope test-->
         <!--单元测试需要 只在test-->
         <junit.version>4.12</junit.version>
@@ -69,6 +72,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${apache.poi.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
