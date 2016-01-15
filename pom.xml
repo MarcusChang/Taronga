@@ -18,6 +18,15 @@
 
         <spring.version>4.2.4.RELEASE</spring.version>
 
+        <!-- mybatis -->
+        <mybatis.version>3.3.0</mybatis.version>
+
+        <!-- mybatis spring -->
+        <mybstisSpring.version>1.2.3</mybstisSpring.version>
+
+        <!-- mysql -->
+        <mysql.connector.version>5.1.38</mysql.connector.version>
+
         <!--scope test-->
         <!--单元测试需要 只在test-->
         <junit.version>4.12</junit.version>
@@ -60,6 +69,25 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybstisSpring.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>com.relevantcodes</groupId>
