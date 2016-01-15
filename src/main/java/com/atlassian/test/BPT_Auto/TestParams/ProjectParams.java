@@ -159,19 +159,19 @@ public class ProjectParams implements ApplicationContextAware {
         return propertiesFactoryBean.get("WaitElementTime").toString().trim();
     }
 
-    public static String getMySQLAddress() {
+    public static String getMySqlAddress() {
         return propertiesFactoryBean.get("MySqlAddress").toString().trim();
     }
 
-    public static String getMySQLdbClass() {
+    public static String getMySqlDbClass() {
         return propertiesFactoryBean.get("MySqlDbClass").toString().trim();
     }
 
-    public static String getMySQLuserName() {
+    public static String getMySqlUserName() {
         return propertiesFactoryBean.get("MySqlUserName").toString().trim();
     }
 
-    public static String getMySQLuserPass() {
+    public static String getMySqlUserPass() {
         return propertiesFactoryBean.get("MySqlUserPass").toString().trim();
     }
 
