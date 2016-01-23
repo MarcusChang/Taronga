@@ -258,12 +258,12 @@
                 <version>${surefire.version}</version>
                         <configuration>
                             <includes>
-                                <include>${test-classes-CreateNewPageChrome}</include>
-                                <include>${test-classes-CreateNewPageFirefox}</include>
-                                <include>${test-classes-CreateNewPageIE}</include>
-                                <include>${test-classes-SetRestrictionsChrome}</include>
-                                <include>${test-classes-SetRestrictionsFirefox}</include>
-                                <include>${test-classes-SetRestrictionsIE}</include>
+                                <!--<include>${test-classes-CreateNewPageChrome}</include>-->
+                                <!--<include>${test-classes-CreateNewPageFirefox}</include>-->
+                                <!--<include>${test-classes-CreateNewPageIE}</include>-->
+                                <!--<include>${test-classes-SetRestrictionsChrome}</include>-->
+                                <!--<include>${test-classes-SetRestrictionsFirefox}</include>-->
+                                <!--<include>${test-classes-SetRestrictionsIE}</include>-->
                             </includes>
                         </configuration>
             </plugin>
