@@ -256,28 +256,33 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.version}</version>
-                <executions>
-                    <execution>
-                        <id>Atlassian-BPT-Test</id>
-                        <!--<phase>test</phase>-->
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
                         <configuration>
                             <includes>
-                                <include>**/TestCase_CreateNewPage_QuickCreate_On_Chrome.java</include>
-                                <include>**/TestCase_CreateNewPage_QuickCreate_On_Firefox.java</include>
-                                <include>**/TestCase_CreateNewPage_QuickCreate_On_IE.java</include>
-                                <include>**/TestCase_SetRestrictions_QuickCreate_On_Chrome.java</include>
-                                <include>**/TestCase_SetRestrictions_QuickCreate_On_Firefox.java</include>
-                                <include>**/TestCase_SetRestrictions_QuickCreate_On_IE.java</include>
+                                <include>${test-classes-CreateNewPageChrome}</include>
+                                <include>${test-classes-CreateNewPageFirefox}</include>
+                                <include>${test-classes-CreateNewPageIE}</include>
+                                <include>${test-classes-SetRestrictionsChrome}</include>
+                                <include>${test-classes-SetRestrictionsFirefox}</include>
+                                <include>${test-classes-SetRestrictionsIE}</include>
                             </includes>
                         </configuration>
-                    </execution>
-                </executions>
             </plugin>
 
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>confluence-tests</id>
+            <properties>
+                <test-classes-CreateNewPageChrome>**/TestCase_CreateNewPage_QuickCreate_On_Chrome.java</test-classes-CreateNewPageChrome>
+                <test-classes-CreateNewPageFirefox>**/TestCase_CreateNewPage_QuickCreate_On_Firefox.java</test-classes-CreateNewPageFirefox>
+                <test-classes-CreateNewPageIE>**/TestCase_CreateNewPage_QuickCreate_On_IE.java</test-classes-CreateNewPageIE>
+                <test-classes-SetRestrictionsChrome>**/TestCase_SetRestrictions_QuickCreate_On_Chrome.java</test-classes-SetRestrictionsChrome>
+                <test-classes-SetRestrictionsFirefox>**/TestCase_SetRestrictions_QuickCreate_On_Firefox.java</test-classes-SetRestrictionsFirefox>
+                <test-classes-SetRestrictionsIE>**/TestCase_SetRestrictions_QuickCreate_On_IE.java</test-classes-SetRestrictionsIE>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
